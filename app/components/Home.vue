@@ -5,24 +5,38 @@
         </ActionBar>
 
         <GridLayout>
-            <Label class="info">
-                <FormattedString>
-                    <Span class="fas" text.decode="&#xf135; "/>
-                    <Span :text="message"/>
-                </FormattedString>
-            </Label>
+            <ScrollView>
+                <GridLayout backgroundColor="blue">
+                    <StackLayout>
+                        <Label class="info" backgroundColor="green">
+                            <FormattedString>
+                                <Span class="fas" text.decode="&#xf135; "/>
+                                <Span text="GridLayout in ScrollView"/>
+                            </FormattedString>
+                        </Label>
+
+                        <Button
+                            class="btn"
+                            text="View GridLayout + min-height"
+                            @tap="goToOtherPage"
+                        />
+                    </StackLayout>
+                </GridLayout>
+            </ScrollView>
         </GridLayout>
     </Page>
 </template>
 
 <script>
-  export default {
-    computed: {
-      message() {
-        return "Blank {N}-Vue app";
-      }
-    }
-  };
+import Other from './Other'
+
+export default {
+    methods: {
+        goToOtherPage() {
+            this.$navigateTo(Other)
+        },
+    },
+};
 </script>
 
 <style scoped lang="scss">

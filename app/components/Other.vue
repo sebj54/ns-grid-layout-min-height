@@ -4,8 +4,8 @@
             <Label text="Other"/>
         </ActionBar>
 
-        <StackLayout>
-            <GridLayout backgroundColor="blue" minHeight="300">
+        <!-- <StackLayout backgroundColor="red">
+            <GridLayout minHeight="300" backgroundColor="blue">
                 <StackLayout>
                     <Label class="info" backgroundColor="green">
                         <FormattedString>
@@ -21,7 +21,23 @@
                     />
                 </StackLayout>
             </GridLayout>
-        </StackLayout>
+        </StackLayout> -->
+        <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" backgroundColor="red">
+            <StackLayout>
+                <Label class="info" backgroundColor="green">
+                    <FormattedString>
+                        <Span class="fas" text.decode="&#xf135; "/>
+                        <Span text="GridLayout + min-height"/>
+                    </FormattedString>
+                </Label>
+
+                <Button
+                    class="btn"
+                    text="View GridLayout in ScrollView"
+                    @tap="goToHomePage"
+                />
+            </StackLayout>
+        </FlexboxLayout>
     </Page>
 </template>
 

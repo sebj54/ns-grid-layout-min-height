@@ -6,7 +6,7 @@
 
         <GridLayout>
             <ScrollView>
-                <GridLayout backgroundColor="blue">
+                <!-- <GridLayout backgroundColor="blue">
                     <StackLayout>
                         <Label class="info" backgroundColor="green">
                             <FormattedString>
@@ -21,7 +21,24 @@
                             @tap="goToOtherPage"
                         />
                     </StackLayout>
-                </GridLayout>
+                </GridLayout> -->
+
+                <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" backgroundColor="red">
+                    <StackLayout>
+                        <Label v-for="n in 25" :key="n" class="info" backgroundColor="green">
+                            <FormattedString>
+                                <Span class="fas" text.decode="&#xf135; "/>
+                                <Span text="GridLayout in ScrollView"/>
+                            </FormattedString>
+                        </Label>
+
+                        <Button
+                            class="btn"
+                            text="View GridLayout + min-height"
+                            @tap="goToOtherPage"
+                        />
+                    </StackLayout>
+                </FlexboxLayout>
             </ScrollView>
         </GridLayout>
     </Page>
